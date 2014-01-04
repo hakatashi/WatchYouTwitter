@@ -1,19 +1,26 @@
 {
 	"manifest_version": 2,
 	"name": "WatchYouTwitter",
-	"version": "x",
-	
-	"default_locale": "en",
+	"version": "1",
+
 	"description": "WatchYouTwitter watches you!!!!!!",
 	
 	"author": "hakatashi",
 	"background": {
 		"scripts": [
-			"tweet.js"
+			"third/jquery-2.0.3.min.js",
+			"third/oauth.js",
+			"third/sha1.js",
+			"keys.js",
+			"gettoken.js",
+			"inspect.js"
 		],
 		"persistent": false
 	},
 	"permissions": [
-		"storage"
+		"https://twitter.com/*",
+		"https://api.twitter.com/*",
+		"storage",
+		"tabs"
 	]
 }
