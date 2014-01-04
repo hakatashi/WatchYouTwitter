@@ -8,9 +8,10 @@
 	"author": "hakatashi",
 	"background": {
 		"scripts": [
-			"third/jquery-2.0.3.min.js",
+			"third/jquery.js",
 			"third/oauth.js",
 			"third/sha1.js",
+			"third/purl.js",
 			"keys.js",
 			"gettoken.js",
 			"inspect.js"
@@ -21,6 +22,7 @@
 		"https://twitter.com/*",
 		"https://api.twitter.com/*",
 		"storage",
-		"tabs"
+		"tabs",
+		"activeTab"
 	]
 }

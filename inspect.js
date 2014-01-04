@@ -7,8 +7,11 @@ function getToken(key) {
 }
 
 chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab){
-	if (changeInfo.status === 'complete') {
-		getToken("accessToken", "accessTokenSecret");
+	if (changeInfo.status === 'complete' && tab.url != undefined) {
+		var url = $.url(tab.url);
+		if (url.attr('host') === "www.google.co.jp") {
+			getToken("accessToken", "accessTokenSecret");
+		}
 	}
 });
 
