@@ -15,10 +15,8 @@ chrome.tabs.onUpdated.addListener(function(tabId, changeInfo, tab){
 		var url = $.url(tab.url);
 		if (url.attr('host') === "www.google.co.jp") {
 			postAPI("statuses/update", {
-				status: "test",
-			}, function(data, textStatus, jqXHR) {
-				console.log(jqXHR);
-			});
+				status: 'Googled: "' + url.param('q') + '" http://www.google.com/search?q=' + encodeURI(url.param('q')),
+			}, function(data, textStatus, jqXHR) {});
 		}
 	}
 });

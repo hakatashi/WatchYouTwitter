@@ -34,6 +34,7 @@ function postAPI(dest, parameters, callback) {
 		}
 	};
 
+	console.log(message);
 	$.ajax(options);
 }
 

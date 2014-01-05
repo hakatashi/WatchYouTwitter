@@ -4,6 +4,9 @@
 	"version": "1",
 
 	"description": "WatchYouTwitter watches you!!!!!!",
+	"icons": {
+		"128": "icon128.png"
+	},
 	
 	"author": "hakatashi",
 	"background": {
