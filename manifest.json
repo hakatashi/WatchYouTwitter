@@ -12,6 +12,7 @@
 			"third/oauth.js",
 			"third/sha1.js",
 			"third/purl.js",
+			"twitter.js",
 			"keys.js",
 			"gettoken.js",
 			"inspect.js"

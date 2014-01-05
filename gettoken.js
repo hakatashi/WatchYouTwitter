@@ -72,9 +72,9 @@ function stealPIN(tabId, changeInfo, tab) {
 				secretKey.PIN = message.PIN;
 				console.log(message.PIN);
 				getAccessToken();
-				sendResponce({status: true});
+				sendResponse({status: true});
 			}
-		})
+		});
 	}
 }
 
@@ -104,11 +104,16 @@ function getAccessToken() {
 		success: function(data, textStatus) {
 			accessTokens = parseQuery(data);
 			console.log(accessTokens);
-			secretKey.oauthToken = accessTokens.oauth_token;
-			secretKey.oauthTokenSecret = accessTokens.oauth_token_secret;
+			secretKey.accessToken = accessTokens.oauth_token;
+			secretKey.accessTokenSecret = accessTokens.oauth_token_secret;
+			chrome.storage.sync.set({
+				"accessToken": secretKey.accessToken,
+				"accessTokenSecret": secretKey.accessTokenSecret
+			});
+			console.log(secretKey);
 		},
 		error: function(jqXHR, textStatus) {
-			console.log('getRequestToken error: ' + textStatus);
+			console.log('getAccessToken error: ' + textStatus);
 		},
 		timeout: 10000
 	}
