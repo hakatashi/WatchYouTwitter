@@ -4,7 +4,7 @@ if ($pin.length > 0) {
 		console.log("get responce");
 		if (responce.status == true) {
 			$("#oauth_pin code").text('-------');
-			$("#code-desc").text("Authentication has successfully conpleted. You don't have to enter PIN code!");
+			$("#code-desc").text("Authentication has successfully completed. You don't have to enter PIN code!");
 		}
 	});
 }
